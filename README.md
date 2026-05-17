@@ -1,23 +1,19 @@
+[README.md](https://github.com/user-attachments/files/27899153/README.md)
 # 🏥 Emergency Ward Hospital Analytics Dashboard
 ### Power BI | Healthcare Analytics | Hospital Operations KPIs
 
 ---
 
-![Dashboard Banner](screenshots/banner.png)
-> *Replace the above with your LinkedIn banner image or a full dashboard screenshot*
-
----
-
 ## 📌 Project Overview
 
-This Power BI dashboard provides a comprehensive view of Emergency Ward operations for hospital administrators and healthcare analysts. It tracks patient flow, wait times, satisfaction levels, referral patterns, and admission trends — enabling data-driven decision-making in high-pressure clinical environments.
+This Power BI dashboard provides a comprehensive view of Emergency Ward operations for hospital administrators and healthcare analysts. Built on **19 months of real-world ER data (April 2023 – October 2024)**, it tracks patient flow, wait times, satisfaction levels, referral patterns, and admission trends — enabling data-driven decisions in high-pressure clinical environments.
 
-The dashboard is designed to help healthcare leadership answer critical questions:
+The dashboard helps healthcare leadership answer critical questions:
 - How many patients are being seen each day, week, and month?
 - Are wait times within acceptable clinical thresholds?
 - What is the patient satisfaction score — and where are the gaps?
 - Which hours and days experience the highest patient load?
-- What is the gender-wise and admission-status breakdown?
+- What is the gender-wise, age-wise, and race-wise patient breakdown?
 
 ---
 
@@ -25,58 +21,56 @@ The dashboard is designed to help healthcare leadership answer critical question
 
 The report contains **4 interactive pages**, each serving a different analytical purpose:
 
+---
+
 ### 1. 📅 Monthly View
-Tracks all key metrics on a month-by-month basis. Ideal for identifying trends, seasonal patterns, and performance changes over time.
+Tracks all key KPIs on a **month-by-month basis** with a YY-MM slicer for easy navigation. Includes patient admission status, age group distribution, department referrals, race breakdown, gender split, % seen within 30 minutes, and a day-hour heatmap.
 
-**Screenshot:**
+> **Sample snapshot — February 2024:** 431 patients | Avg Wait: 36.7 Min | Avg Satisfaction: 4.72 | Referred: 179
 
-<!-- ADD YOUR SCREENSHOT BELOW — replace the placeholder path -->
 ![Monthly View](screenshots/monthly_view.png)
 
 ---
 
 ### 2. 📋 Consolidated View
-A high-level summary of all metrics across the entire dataset period. Perfect for leadership dashboards and executive reporting.
+A **full-period overview (April 2023 – October 2024)** summarising all metrics in one place. Ideal for leadership dashboards and executive reporting. Shows total-level KPIs, referral volumes, age distribution, gender and race breakdowns, and the complete day-hour heatmap across 9,216 patients.
 
-**Screenshot:**
+> **Total period:** 9K patients | 35.3 Min avg wait | 4.99 avg satisfaction | 4K referred
 
-<!-- ADD YOUR SCREENSHOT BELOW — replace the placeholder path -->
 ![Consolidated View](screenshots/consolidated_view.png)
 
 ---
 
 ### 3. 👤 Patient Details
-A drill-down table page that allows filtering by patient attributes. Useful for operational teams who need to review individual records or segment by specific criteria.
+A **drill-down table page** listing individual patient records with columns for Patient ID, Full Name, Gender, Age, Race, Wait Time, Department Referral, and Admission Status. Supports filtering by date range for granular operational review.
 
-**Screenshot:**
-
-<!-- ADD YOUR SCREENSHOT BELOW — replace the placeholder path -->
 ![Patient Details](screenshots/patient_details.png)
 
 ---
 
 ### 4. 💡 Key Takeaways
-An insights summary page designed for presentations and stakeholder reporting. Highlights the most important findings from the data in a clean, readable format.
+An **insights summary page** written for stakeholder presentations. Highlights the most critical findings from the dataset in readable narrative form — covering wait time analysis, departmental referrals, peak busy periods, patient demographics, race distribution, and admission patterns.
 
-**Screenshot:**
-
-<!-- ADD YOUR SCREENSHOT BELOW — replace the placeholder path -->
 ![Key Takeaways](screenshots/key_takeaways.png)
 
 ---
 
-## 📈 Key Metrics Tracked
+## 📈 Key Metrics & Findings
 
-| KPI | Description |
-|-----|-------------|
-| **Total Patients** | Total number of patients registered across all periods |
-| **Avg Wait Time** | Average time (in minutes) a patient waits before being seen |
-| **Avg Satisfaction Score** | Patient-reported satisfaction on a scale of 1–10 |
-| **Total Patients Referred** | Number of patients referred to other departments or hospitals |
-| **% Seen Within 30 Min** | Percentage of patients attended to within the 30-minute target |
-| **Admission Status** | Breakdown of admitted vs. not admitted patients |
-| **Patients by Gender** | Gender-wise distribution of patient visits |
-| **Total Patients by Day & Hour** | Heatmap of patient load by day of week and hour of day |
+| KPI | Value |
+|-----|-------|
+| **Total Patients** | 9,216 (April 2023 – October 2024) |
+| **Avg Wait Time** | 35.3 minutes |
+| **Avg Satisfaction Score** | 4.99 / 10 |
+| **Total Patients Referred** | ~4K |
+| **% Seen Within 30 Min** | 59.32% (within target) |
+| **Admitted** | 4,612 (50.04%) |
+| **Not Admitted** | 4,604 (49.96%) |
+| **Top Referral Dept** | General Practice (1,840 cases) |
+| **Busiest Day** | Monday (1,377 patients) |
+| **Busiest Hours** | 11 AM, 7 PM, 1 AM, 11 PM |
+| **Largest Age Group** | 30–39 Years (1,200 patients) |
+| **Largest Race Group** | White (2,571 patients) |
 
 ---
 
@@ -100,11 +94,10 @@ Emergency-Ward-Hospital-Analytics-PowerBI/
 ├── README.md                    # Project documentation (this file)
 │
 └── screenshots/                 # Dashboard page screenshots
-    ├── banner.png               # LinkedIn/portfolio banner
-    ├── monthly_view.png         # Page 1 screenshot
-    ├── consolidated_view.png    # Page 2 screenshot
-    ├── patient_details.png      # Page 3 screenshot
-    └── key_takeaways.png        # Page 4 screenshot
+    ├── monthly_view.png         # Page 1 — Monthly KPI view
+    ├── consolidated_view.png    # Page 2 — Full period overview
+    ├── patient_details.png      # Page 3 — Individual patient table
+    └── key_takeaways.png        # Page 4 — Insights summary
 ```
 
 ---
@@ -113,17 +106,18 @@ Emergency-Ward-Hospital-Analytics-PowerBI/
 
 1. **Download** the `Emergency_Ward.pbix` file from this repository
 2. **Open** it in [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free to download)
-3. **Explore** each of the 4 report pages using the navigation buttons at the bottom
-4. **Use the slicers** to filter data by date, department, or other dimensions
-5. **Publish** to Power BI Service if you want to share it online with your team
+3. **Explore** each of the 4 report pages using the navigation buttons on the left menu
+4. **Use the date slicer** (top right) to filter by any time period between April 2023 – October 2024
+5. **Use the YY-MM dropdown** on the Monthly View to switch between months
+6. **Publish** to Power BI Service if you want to share it online with your team
 
 ---
 
 ## 💼 Domain
 
-**Healthcare Analytics** | Hospital Operations | Clinical KPIs | Emergency Medicine Data | Patient Flow Analysis
+**Healthcare Analytics** | Hospital Operations | Clinical KPIs | Emergency Medicine | Patient Flow Analysis
 
-This project demonstrates skills applicable to roles in:
+This project demonstrates skills applicable to roles such as:
 - Data Analyst (Healthcare / Hospital sector)
 - Business Intelligence Developer
 - Power BI Developer
@@ -136,9 +130,10 @@ This project demonstrates skills applicable to roles in:
 
 | Platform | Link |
 |----------|------|
-| **LinkedIn** | [Add your LinkedIn URL here] |
-| **Naukri** | [Add your Naukri profile URL here] |
-| **Email** | [Add your email here] |
+| **LinkedIn** | https://www.linkedin.com/in/kumar97roshan/ |
+| **Portfolio** | https://kumar-roshan-bidev-vh64ira.gamma.site/ |
+| **Email** | kumar97roshan@gmail.com |
+| **Phone** | +918936827737 |
 
 ---
 
